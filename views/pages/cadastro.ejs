@@ -1,0 +1,90 @@
+<%- contentFor( 'body' ) %>
+
+    <div class="" id="tema">
+        <h2 class="pt-5">Sing in</h2>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Frog Name</th>
+                    <th>Frog-mail</th>
+                    <th>River</th>
+                    <th>Age</th>
+                    <th>Height</th>
+                    <th>Vota?</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+
+                <% let linkRemove="/cadastro/remove/" ; %>
+                    <% let linkUpdate="/cadastro/update/" ; %>
+
+                        <% for(let index=0;index<users.length;index++){ %>
+                            <tr>
+
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].name %>
+                                    </span>
+                                    <input type="text" name="name" class="hidden" value="<%= users[index].name %>">
+                                </td>
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].email %>
+                                    </span>
+                                    <input type="text" name="email" class="hidden" value="<%= users[index].email %>">
+                                </td>
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].address %>
+                                    </span>
+                                    <input type="text" name="address" class="hidden"
+                                        value="<%= users[index].address %>">
+                                </td>
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].age %>
+                                    </span>
+                                    <input type="text" name="age" class="hidden" value="<%= users[index].age %>">
+
+                                </td>
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].height %>
+                                    </span>
+                                    <input type="text" name="height" class="hidden" value="<%= users[index].height %>">
+
+                                </td>
+                                <td data-index-row="<%=index%>">
+                                    <span class="show">
+                                        <%= users[index].vote %>
+                                    </span>
+                                    <input type="text" name="vote" class="hidden" value="<%= users[index].vote %>">
+
+                                </td>
+                                <td data-index-row="<%=index%>" class="hidden" data-index-row="<%=index%>"><input
+                                        type="button" value="Atualizar" class="hidden"></td>
+
+                                <td data-index-row="<%= index %>">
+                                    <a href="#" onclick="update('<%=index%>','<%= linkUpdate %>')" class="show"><i
+                                            class="fas fa-pen"></i></a>
+                                </td>
+
+                                <td data-index-row="<%= index %>">
+                                    <a href="#" class="show" onclick="remove('<%=index %>','<%=linkRemove%>')"><i
+                                            class="fas fa-trash-alt"></i></a>
+                                </td>
+
+                            </tr>
+                            <% } %>
+
+            </tbody>
+        </table>
+        <div class="d-flex">
+            <img src="https://i.pinimg.com/originals/7a/84/d8/7a84d8868bf6dcb35c8ab5fbbb20eb97.jpg" width="200px"
+                alt="">
+            <h2 class="d-flex pt-5">imagine if everony bens frogs</h2>
+        </div>
+    </div>

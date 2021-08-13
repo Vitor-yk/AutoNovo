@@ -1,0 +1,29 @@
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(235, 35, 35);
+    color: blue;
+}
+.show{
+    display:inline-flexbox;
+}
+.hidden{
+    display:none;
+}
+#butao{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: blue;
+    border-radius: 20px;
+}
+#nav{
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+tbody{
+    background-color:rgb(138, 151, 138);
+}
+#tema h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
