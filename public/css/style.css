@@ -1,29 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
 body{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(235, 35, 35);
-    color: blue;
+    font-family: 'Kaisei HarunoUmi', serif;
+    margin: 0;
 }
+
 .show{
     display:inline-flexbox;
 }
+
 .hidden{
     display:none;
 }
-#butao{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
-    color: blue;
-    border-radius: 20px;
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+  } 
+
+  .fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 3s; 
 }
-#nav{
-    background-color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
+.fade-in2 {
+    animation-delay: 1ms;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 7s; 
 }
-tbody{
-    background-color:rgb(138, 151, 138);
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-#tema h2{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+/*     image bckground     */
+
+#container-imagem {
+    width: 100px;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+img{
+    max-width:100% !important;
+
+}  
+
+.container-imagem{
+   padding: 0 !important;
+   margin: 0 !important;
+   
+}
+
+.max-width {
+
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, transparent 30%, black 100%);
+    mask-image: linear-gradient(to right, transparent 30%, black 100%);
+  } 
+
+.max-width {
+width: 100%;
+position: absolute;
+z-index: -1;
+top: -100px;
+margin: 0 auto;
+background-color: #fff;
+}
+
+.max-width2 {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+    background-color: #fff;
+    }
+
+    .max-width3 {
+
+        object-fit: cover;
+        -webkit-mask-image: linear-gradient(to left, transparent 30%, black 100%);
+        mask-image: linear-gradient(to left, transparent 30%, black 100%);
+      } 
     
+    .max-width3 {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+    background-color: #fff;
+    }
+
+
+    .max-width4 {
+        width: 100%;
+        position: absolute;
+        top: -200px;
+        z-index: -1;
+        margin: 0 auto;
+        background-color: #fff;
+        }
+
+
+/*    textos e apresentações   */
+
+h2{
+    font-family: 'Kaisei HarunoUmi', serif;
 }
+
+#texto-m h1{
+    font-size: 30px;
+}
+
+#titulo-1 h1{
+    font-size: 60px;
+    color: teal;
+}
+
+#titulo-1 h2{
+    font-size: 30px;
+}
+
+#titulo-2 h1{
+    font-size: 30px;
+}
+hr{
+    position: absolute;
+    width: 50%;
+}
+
+.texto-apresentação{
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-size: 20px;
+}
+.texto-apresentação button{
+    color: white;
+    background-color:teal;
+    border-radius: 40px;
+    border: none;
+
+}
+.texto-apresentação button a{
+    font-size: 20px;
+    padding: 5px;
+   color: white;
+   font-size: 30px;
+  text-decoration: none;
+}
+
+/*   cadastro-home   */
+
+#cadastro-secundario a{
+    color: teal;
+    text-decoration: none;
+}
+
+
+
+/*   Cadastro main-edição   */
+
+#table-div{
+height: 500px;
+overflow-y:scroll;
+}
+
+#list{
+    font-size: 20px;
+    color: white;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bolder;
+}
+#div-all-cadastro{
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+#div-all-cadastro h2{
+}
+
+#texto-cad-1{
+
+}
+
+
+/*   Sem dado em cadastro - editor   */
+
+#nothing-date{
+    text-align: center;
+    width: 500px;
+    
+
+}
+
+/*    custom scrollbar     */
+#div-all-cadastro ::-webkit-scrollbar{
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+
+  td:hover{
+      background-color:teal;
+  }
+
+
+
+  /*  Realizar Cadastro  */
+
+  #div-rcad{
+          font-family: 'Kaisei HarunoUmi', serif;
+      width: 475px;
+      float: right;
+      
+  }
+
+  #div-rcad label{
+font-size: 20px;
+  }
+
+  #div-rcad input{
+      color: white;
+    background-color: teal;
+    width: 450px;
+  }
+
+  #button1 {
+      width: 50px;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+  }
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: white
+  }
+
+
+  /*   about   */
+#div-about{
+    font-family: 'Kaisei HarunoUmi', serif;
+    color: white;
+}
+  .t1{
+font-size: 50px;
+color: white;
+  }
+
+  .t2{
+font-size: 30px;
+  }
+  .t3{
+    font-size: 30px;
+      }

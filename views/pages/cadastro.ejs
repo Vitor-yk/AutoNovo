@@ -1,90 +1,150 @@
 <%- contentFor( 'body' ) %>
-
-    <div class="" id="tema">
-        <h2 class="pt-5">Sing in</h2>
-        <table class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>Frog Name</th>
-                    <th>Frog-mail</th>
-                    <th>River</th>
-                    <th>Age</th>
-                    <th>Height</th>
-                    <th>Vota?</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-
-                <% let linkRemove="/cadastro/remove/" ; %>
-                    <% let linkUpdate="/cadastro/update/" ; %>
-
-                        <% for(let index=0;index<users.length;index++){ %>
-                            <tr>
-
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].name %>
-                                    </span>
-                                    <input type="text" name="name" class="hidden" value="<%= users[index].name %>">
-                                </td>
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].email %>
-                                    </span>
-                                    <input type="text" name="email" class="hidden" value="<%= users[index].email %>">
-                                </td>
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].address %>
-                                    </span>
-                                    <input type="text" name="address" class="hidden"
-                                        value="<%= users[index].address %>">
-                                </td>
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].age %>
-                                    </span>
-                                    <input type="text" name="age" class="hidden" value="<%= users[index].age %>">
-
-                                </td>
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].height %>
-                                    </span>
-                                    <input type="text" name="height" class="hidden" value="<%= users[index].height %>">
-
-                                </td>
-                                <td data-index-row="<%=index%>">
-                                    <span class="show">
-                                        <%= users[index].vote %>
-                                    </span>
-                                    <input type="text" name="vote" class="hidden" value="<%= users[index].vote %>">
-
-                                </td>
-                                <td data-index-row="<%=index%>" class="hidden" data-index-row="<%=index%>"><input
-                                        type="button" value="Atualizar" class="hidden"></td>
-
-                                <td data-index-row="<%= index %>">
-                                    <a href="#" onclick="update('<%=index%>','<%= linkUpdate %>')" class="show"><i
-                                            class="fas fa-pen"></i></a>
-                                </td>
-
-                                <td data-index-row="<%= index %>">
-                                    <a href="#" class="show" onclick="remove('<%=index %>','<%=linkRemove%>')"><i
-                                            class="fas fa-trash-alt"></i></a>
-                                </td>
-
-                            </tr>
-                            <% } %>
-
-            </tbody>
-        </table>
-        <div class="d-flex">
-            <img src="https://i.pinimg.com/originals/7a/84/d8/7a84d8868bf6dcb35c8ab5fbbb20eb97.jpg" width="200px"
-                alt="">
-            <h2 class="d-flex pt-5">imagine if everony bens frogs</h2>
-        </div>
+    <div class="max-width2">
+        <img src="https://wallpapercave.com/wp/wp2132611.jpg" alt="">
     </div>
+    <div class="table-responsive-xl fade-in" id="div-all-cadastro">
+        <div class="pt-3" id="texto-cad-1">
+            <h2 id="texto-cad-1" style="text-align: center;">Usuários Cadastrados</h2>
+            <h3 id="texto-cad-2" style="text-align:center;"> Aqui você edita as informações dos usuario!</h3>
+        </div>
+        <div class="p-5"></div>
+        <h3 id="texto-cad-2" style="text-align: center;">Use o scroll do seu mouse para subir as informações!</h3>
+        <div class="p-5"></div>
+
+
+
+        <div id="table-div">
+            <table class="table  container-fluid bg-none" id="list">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Endereço</th>
+                        <th>Idade</th>
+                        <th>Altura</th>
+                        <th>Vota?</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% let linkRemove="/cadastro/remove/" ; %>
+                        <% let linkUpdate="/cadastro/update/" ; %>
+
+                            <% if(users.length>0){%>
+                                <% for(let index=0;index<users.length;index++){ %>
+                                    <tr data-index-row="<%= index %>">
+
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].name %>
+                                            </span>
+                                            <input type="text" name="name" class="hidden"
+                                                value="<%= users[index].name %>">
+                                        </td>
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].email %>
+                                            </span>
+                                            <input type="text" name="email" class="hidden"
+                                                value="<%= users[index].email %>">
+                                        </td>
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].address %>
+                                            </span>
+                                            <input type="text" name="address" class="hidden"
+                                                value="<%= users[index].address %>">
+                                        </td>
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].age %>
+                                            </span>
+                                            <input type="number" step="0.1" name="age" class="hidden"
+                                                value="<%= users[index].age %>">
+
+                                        </td>
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].height %>
+                                            </span>
+                                            <input type="number" name="height" class="hidden"
+                                                value="<%= users[index].height %>">
+
+                                        </td>
+                                        <td data-index-row="<%=index%>">
+                                            <span class="show">
+                                                <%= users[index].vote %>
+                                            </span>
+                                            <input type="text" name="vote" class="hidden"
+                                                placeholder="Digite Sim ou Não." value="<%= users[index].vote %>">
+
+                                        </td>
+                                        <td data-index-row="<%=index%>" class="hidden" data-index-row="<%=index%>">
+                                            <input type="button" value="Atualizar" class="hidden">
+                                        </td>
+
+                                        <td data-index-row="<%= index %>">
+                                            <a href="#" onclick="update('<%=index%>','<%= linkUpdate %>')"
+                                                class="show"><i class="fas fa-pen"></i></a>
+                                        </td>
+
+                                        <td data-index-row="<%= index %>">
+                                            <a href="#" class="show"
+                                                onclick="remove('<%=index %>','<%=users[index].name %>','<%=linkRemove%>')"><i
+                                                    class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <% } //for %>
+                                        <% }else{%>
+                                            <tr>
+                                                <td colspan="12" id="nothing-date">
+
+                                                    <img src="https://preview.redd.it/7qlgekwwahy21.png?width=640&crop=smart&auto=webp&s=fb213e4ea92d4f495514bac61992ed1e48570097"
+                                                        width="200px" alt="">
+                                                    <p class="">Não há nenhum dado Cadastrado</p>
+                                                </td>
+                                            </tr>
+                                            <%} //If-Else %>
+                </tbody>
+            </table>
+        </div>
+        <div class="p-2"></div>
+    </div>
+
+    <!--
+
+        <h2>Cadastrar novo usuário</h2>
+        <div class="form-group">
+            <label for="_name">Nome:</label>
+            <input type="text" name="_name" data-ind="cadinp" id="_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="_email">E-mail:</label>
+            <input type="email" name="_email" data-ind="cadinp" id="_email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="_address">Endereço:</label>
+            <input type="text" name="_address" data-ind="cadinp" id="_address" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="_age">Idade:</label>
+            <input type="number" name="_age" data-ind="cadinp" id="_age" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="_heigth">Altura:</label>
+            <input type="number" step="0.01" name="_heigth" data-ind="cadinp" id="_heigth" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="_vote">Votou?</label>
+            <input type="text" name="_vote" data-ind="cadinp" id="_vote" placeholder="Digite Sim ou Não."
+                class="form-control">
+        </div>
+        <div class="form-group" style="text-align: center;">
+            <input type="submit" value="Enviar" class="btn btn-success" onclick="add('/cadastro/add/')">
+        </div>
+
+    </div>
+https://cutewallpaper.org/21/pepe-phone-wallpaper/phone-wallpapers-anyone.jpg
+    -->
