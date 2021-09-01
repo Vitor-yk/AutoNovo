@@ -1,0 +1,50 @@
+<div class="max-width2">
+    <img src="https://wallpaperaccess.com/full/1787204.jpg" alt="">
+</div>
+<div class="table-responsive-xl fade-in" id="div-all-cadastro">
+    <div class="text-center pt-3" id="texto-cad-1">
+        <h2 id="texto-cad-1" style="text-align: center;">Usuários Cadastrados</h2>
+        <h2 id="texto-cad-2" style="text-align: center;">Procurar</h2>
+        <input type="text" id="myInput" onkeyup="myFunction()" title="Type in a name">
+        <div class="p-3"></div>
+    </div>
+
+    <div id="table-div">
+        <table class="table bg-none list-new" id="list-users">
+            <thead class="thead-light">
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Idade</th>
+                    <th>Altura</th>
+                    <th>Vota?</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="p-2"></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#list-users tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
+
+
+</div>

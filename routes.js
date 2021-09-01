@@ -34,17 +34,15 @@ router.get('/about', (req, res) => { //callback - funcao que trata dado evento  
 });
 
 
-router.get('/rcadastro', (req, res) => { //callback - funcao que trata dado evento  GET
-
-    //a funcao render pode receber um pametro na forma de objeto literal
-    //no caso, ela irá receber um objeto com campo chamado users e com valor igual ao vetor users
+router.get('/rcadastro', (req, res) => {
     res.render('pages/rcadastro', { users: users });
 });
 
-router.get('/cadastro', (req, res) => { //callback - funcao que trata dado evento  GET
+router.get('/lista', (req, res) => {
+    res.render('pages/lista', { users: users });
+});
 
-    //a funcao render pode receber um pametro na forma de objeto literal
-    //no caso, ela irá receber um objeto com campo chamado users e com valor igual ao vetor users
+router.get('/cadastro', (req, res) => {
     res.render('pages/cadastro', { users: users });
 });
 

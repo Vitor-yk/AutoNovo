@@ -193,10 +193,14 @@ overflow-y:scroll;
 #div-all-cadastro h2{
 }
 
-#texto-cad-1{
-
+#texto-cad-2{
+font-size: 20px;
 }
-
+#texto-cad-2 a{
+    text-decoration: none;
+    color:greenyellow;
+    font-size: 40px;
+}
 
 /*   Sem dado em cadastro - editor   */
 
@@ -218,9 +222,6 @@ overflow-y:scroll;
   }
 
 
-  td:hover{
-      background-color:teal;
-  }
 
 
 
@@ -249,6 +250,7 @@ font-size: 20px;
       border-radius: 20px;
       border: none;
   }
+
   ::placeholder {
     color: white;
     opacity: 1; /* Firefox */
@@ -261,6 +263,27 @@ font-size: 20px;
   ::-ms-input-placeholder { /* Microsoft Edge */
    color: white
   }
+/* Lista */
+
+#list-users{
+    font-size: 20px;
+    color: white;
+    font-family: 'Kaisei HarunoUmi', serif;
+    font-weight: bolder;
+}
+
+tr:hover{
+    background-color:gray;
+}
+
+
+
+#myInput{
+    border-radius: 20px;
+    color: green;
+
+}
+
 
 
   /*   about   */
